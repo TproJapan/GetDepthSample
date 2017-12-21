@@ -138,3 +138,4 @@
 
 // On tvOS simulator we implement a fake remote as tvOS simulator does not support controllers (yet)
 #define UNITY_TVOS_SIMULATOR_FAKE_REMOTE (PLATFORM_TVOS && TARGET_TVOS_SIMULATOR)
+#define ARKIT_USES_FACETRACKING 1

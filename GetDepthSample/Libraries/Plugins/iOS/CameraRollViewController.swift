@@ -1,8 +1,7 @@
 import UIKit
 import ARKit
 
-public class CameraRollViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, ARSessionDelegate {
-    
+public class CameraRollViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,ARSessionDelegate {
     static var filePath = "";
     
     public func open(_ path: String) {
@@ -43,7 +42,7 @@ public class CameraRollViewController: UIViewController, UINavigationControllerD
         UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale);
         let rect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
         image.draw(in: rect)
-
+        
         let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext();
         return normalizedImage;
